@@ -1,0 +1,6 @@
+.mainContent {
+    width: 100%;
+    min-height: 98vh;
+    position: relative;
+    border:none;
+}
