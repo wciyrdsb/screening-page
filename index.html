@@ -17,9 +17,10 @@
     <meta property="og:image" content="https://covid.isaackogan.com/favicon.ico"/>
     <meta name="theme-color" content="#d0780f">
 
-    <!-- Libraries -->
+    <!-- Libraries/Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+    <script src="index.js"></script>
 
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="index.css">
@@ -29,11 +30,63 @@
 <!-- Start of Body -->
 <body>
 
-<!-- Form Embed -->
-<div>
-    <iframe id="googleFormEmbed" style="z-index: 100" src="https://docs.google.com/forms/d/e/1FAIpQLSf9WPvtith7cAvAc-CSwJRadcNBT7vPNNqMzE2zaN66B70WPQ/viewform?embedded=true" class="mainContent">
-        Loading…
-    </iframe>
+<div class="mainContent">
+
+    <!-- Auto-Fill Module -->
+    <div>
+        <div class="fillContent">
+
+            <!-- Banner & Text Container -->
+            <div class="fillTitleBanner"></div>
+            <div class="fillTitleContainer">
+                <div class="fillTitleInnerContainer">
+                    <div class="fillTitleTitle">
+                        Auto-Complete Form
+                    </div>
+                    <div class="fillTitleDescription">
+                        You can use this website to either manually or automatically fill out Westmount CI's Official Covid-19 Self-Screening form!
+                        <br><br>
+                        For any questions, concerns or suggestions relating to this site,
+                        <a href="https://github.com/wciyrdsb/screening-page/issues" class="hyperlink">create an issue</a> on the
+                        <a href="https://github.com/wciyrdsb/screening-page" class="hyperlink">GitHub repository</a>.
+                        Otherwise, feel free to <a href="https://discord.gg/kaX9H65VhG" class="hyperlink">join my Discord Server</a>, just 'cause.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="fillButtonRow">
+
+                <!-- Edit Config Button -->
+                <button id="editConfig" class="fillButton buttonPrimary">Edit Config</button>
+                <script>
+                    $("#editConfig").on("click", () => {
+                        const config = getConfig();
+                        editConfig(config.email.value || "", config.name.value || "", config.symptoms.value || "");
+                    });
+                </script>
+
+                <!-- Auto Submit Button -->
+                <button id="autoFill" class="fillButton buttonSubmit">Auto-Fill</button>
+                <script>
+                    $("#autoFill").on("click", () => autoFill());
+                </script>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Google Form Module -->
+    <div>
+        <iframe id="googleFormEmbed" class="formContent"  style="z-index: 100"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSf9WPvtith7cAvAc-CSwJRadcNBT7vPNNqMzE2zaN66B70WPQ/viewform?embedded=true">
+            Loading…
+        </iframe>
+    </div>
+
+
+
 </div>
 
 <!-- End of Body -->

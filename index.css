@@ -1,6 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
 .mainContent {
-    width: 100%;
-    min-height: 98vh;
-    position: relative;
-    border:none;
+    display: inline-block;
 }
+
+.formContent {
+    border: none;
+    width: 98vw;
+    height: 980px;
+}
+
+.fillContent {
+    max-width: 90vw;
+    width: 640px;
+    margin: 20px auto 20px;
+}
+
+.fillTitleContainer {
+    border: 1px solid rgb(218, 220, 224);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+
+
+.fillTitleBanner {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 10px;
+    background-color: rgb(103, 58, 183);
+}
+
+.fillTitleInnerContainer {
+    padding: 24px;
+}
+
+.fillTitleTitle {
+    font-size: 34px;
+    line-height: 135%;
+    max-width: 100%;
+}
+
+.fillTitleDescription {
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .2px;
+    line-height: 20px;
+    color: #202124;
+    margin-top: 12px;
+}
+
+.fillButtonRow {
+    margin-top: 16px;
+}
+
+.buttonSubmit {
+    background-color: rgb(103, 58, 183);
+    color: white;
+
+    -webkit-transition:background 0.3s;
+    -moz-transition:background 0.3s;
+    -o-transition:background 0.3s;
+    transition:background 0.3s;
+
+}
+
+.buttonSubmit:hover{
+    background-color: rgb(94, 47, 177);
+}
+
+.buttonPrimary {
+    color: rgb(103, 58, 183);
+    background: white;
+
+}
+
+.buttonPrimary:active {
+    background: #cecece;
+
+    -webkit-transition:background 0.3s;
+    -moz-transition:background 0.3s;
+    -o-transition:background 0.3s;
+    transition:background 0.3s
+}
+
+
+.fillButton {
+    text-align: center;
+    border: none;
+    line-height: 36px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.141),0 1px 3px 0 rgba(0,0,0,0.122);
+    font-family: "Open Sans", Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .25px;
+    min-width: 100px;
+
+}
+
+.hyperlink {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
